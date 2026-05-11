@@ -64,7 +64,7 @@ plugins:
       lang: en
   - social:
       cards_layout_options:
-        background_color: "#000000"
+        background_color: "#2563eb"  # Tailwind blue-600
   - git-revision-date-localized:
       enable_creation_date: true
       type: timeago
