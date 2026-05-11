@@ -1,0 +1,109 @@
+site_name: GitHub Copilot CLI Workshop
+site_url: https://entouanes.github.io/copilot-cli-workshop/
+site_description: A self-guided, hands-on course covering the standalone GitHub Copilot CLI from installation to advanced automation and certification prep.
+site_author: Antoine Combremont
+copyright: "Copyright &copy; 2025 Antoine Combremont"
+
+repo_url: https://github.com/Entouanes/copilot-cli-workshop
+repo_name: Entouanes/copilot-cli-workshop
+edit_uri: edit/main/docs/
+
+docs_dir: docs
+site_dir: site
+
+remote_branch: gh-pages
+remote_name: origin
+
+# ── Theme ─────────────────────────────────────────────────────────────────────
+theme:
+  name: material
+  language: en
+  palette:
+    - scheme: default
+      primary: black
+      accent: deep purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: black
+      accent: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+
+# ── Navigation ────────────────────────────────────────────────────────────────
+nav:
+  - Home: index.md
+  - Modules:
+    - "Module 01: Foundations": modules/01-foundations.md
+    - "Module 02: Core Interaction": modules/02-core-interaction.md
+    - "Module 03: GitHub Integration": modules/03-github-integration.md
+    - "Module 04: Customization": modules/04-customization.md
+    - "Module 05: MCP and LSP": modules/05-mcp-and-lsp.md
+    - "Module 06: Automation": modules/06-automation.md
+    - "Module 07: Hooks and Governance": modules/07-hooks-and-governance.md
+    - "Module 08: Advanced and Certification Prep": modules/08-advanced-and-certification.md
+  - Resources:
+    - Quick Reference Cheatsheet: resources/cheatsheet.md
+    - Lab Project Guide: resources/lab-guide.md
+
+# ── Plugins ───────────────────────────────────────────────────────────────────
+plugins:
+  - search:
+      lang: en
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
+      fallback_to_build_date: true
+
+# ── Markdown extensions ───────────────────────────────────────────────────────
+markdown_extensions:
+  # Python-Markdown builtins
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      toc_depth: 3
+  # PyMdownX (bundled with mkdocs-material)
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+# ── Extra ─────────────────────────────────────────────────────────────────────
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Entouanes
+
+strict: false
