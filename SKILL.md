@@ -94,7 +94,7 @@ plugins:
       lang: en
   - social:
       cards_layout_options:
-        background_color: "#000000"
+        background_color: "#2563eb"  # Tailwind blue-600
   - git-revision-date-localized:
       enable_creation_date: true
       type: timeago
@@ -192,6 +192,8 @@ jobs:
       - name: Configure Git Credentials
         run: |
           git config user.name github-actions[bot]
+          # 41898282 is the fixed GitHub user ID for the github-actions[bot] service account
+          # (this is the same value for every repository — it is not a personal account ID)
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
 
       - name: Install uv
